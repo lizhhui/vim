@@ -6,12 +6,13 @@
 #              install : install
 #              remove  : install anything
 #############################
-if [ x$1 != x ] 
-then
-  rm ~/.vimrc
-else
-
-	if [ ! -e ~/.vimrc ] ; then
-		ln -s ~/lzh/vim/vimrc ~/.vimrc
+#if [ x$1 != x ] 
+#then
+#  rm ~/.vimrc
+#else
+#
+	if [ -e ~/.vimrc ] ; then
+      rm ~/.vimrc
 	fi
-fi
+    ln -s ~/lzh/vim/vimrc ~/.vimrc
+#fi
