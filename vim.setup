@@ -1,0 +1,17 @@
+#!/bin/bash
+#############################
+# Instructions
+# initial vim editor file
+#  ---- usage:
+#              install : install
+#              remove  : install anything
+#############################
+if [ x$1 != x ] 
+then
+  rm ~/.vimrc
+else
+
+	if [ ! -e ~/.vimrc ] ; then
+		ln -s ~/lzh/vim/vimrc ~/.vimrc
+	fi
+fi
